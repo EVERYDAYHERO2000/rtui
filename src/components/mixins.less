@@ -1,0 +1,109 @@
+/*MIXINS*/
+
+.layer_underground() {
+	background-color: @color-dark;
+	color: @color-white;
+	display: block;
+	.box-sizing(border-box);
+}
+
+.layer_ground() {
+	background-color: @color-body;
+	color: @color-text;
+	display: block;
+	.box-sizing(border-box);
+}
+
+.layer_paper() {
+	background-color: @color-white;
+	color: @color-text;
+	display: block;
+	.box-sizing(border-box);
+}
+
+.layer_card() {
+	background-color: @color-white;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.03), inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+	color: @color-text;
+	display: block;
+	.box-sizing(border-box);
+}
+
+.layer_fly() {
+	background-color: @color-white;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+	color: @color-text;
+	display: block;
+	.box-sizing(border-box);
+}
+
+.prefix(@property, @value) {
+	-webkit-@{property}: @value;
+	-moz-@{property}: @value;
+	@{property}: @value;
+}
+
+.inner(@width: 1200px) {
+	max-width: @width;
+	width: auto;
+	margin: 0 auto;
+	padding: 0 60px;
+	.box-sizing(border-box);
+	.MEDIA_MOBILE( {
+		padding: 0 @modul-m;
+	}
+	);
+}
+
+.placeholder(@rules) {
+	&::-webkit-input-placeholder {
+		@rules();
+	}
+	&:-moz-placeholder {
+		@rules();
+	}
+	&::-moz-placeholder {
+		@rules();
+	}
+	&:-ms-input-placeholder {
+		@rules();
+	}
+	&::placeholder {
+		@rules();
+	}
+}
+
+.break-inside(@rules) {
+	-webkit-column-break-inside: @rules;
+	page-break-inside: @rules;
+	break-inside: @rules;
+}
+
+//small descktop devices
+.MEDIA_SMALL-SCREEN(@rules) {
+	@media only screen and (max-width: 1024px) {
+		@rules();
+	}
+}
+
+//tablet vertical
+.MEDIA_TABLET(@rules) {
+	@media only screen and (max-device-width: 768px) {
+		@rules();
+	}
+}
+
+//smartphone vertical
+.MEDIA_MOBILE(@rules) {
+	@media only screen and (max-device-width: 480px) {
+		@rules();
+	}
+}
+
+/*MIXINS END*/
+
+/*ALL*/
+
+* {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}

@@ -1,0 +1,27 @@
+/*LAYOUT*/
+
+.layout {
+	.box-sizing(border-box);
+	//.layout__inner
+	&__inner {
+		.inner();
+	}
+	//.layout__block
+	&__block {
+		padding: @modul-m 0;
+		.box-sizing(border-box);
+	}
+	&__center {
+		text-align: center;
+		.flex-block();
+		.flex-direction(row);
+		.justify-content(center);
+		.align-items(stretch);
+		.flex-wrap(nowrap);
+		.align-content(stretch);
+		margin: @modul-s 0;
+	}
+}
+
+
+/*LAYOUT END*/

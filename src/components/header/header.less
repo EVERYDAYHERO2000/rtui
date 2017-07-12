@@ -1,0 +1,74 @@
+/*HEADER*/
+
+.header {
+	font-family: @font-second;
+	margin: 0;
+	padding: 0;
+	hyphens: auto;
+	//.header_promo
+	&_promo {
+		font-size: 56px;
+		font-weight: bold;
+		line-height: 1.1;
+		font-weight: bold;
+		.MEDIA_MOBILE( {
+			font-size: 48px;
+		}
+		);
+	}
+	//.header_xs
+	&_xs {
+		font-size: 18px;
+		line-height: 1.3;
+		font-weight: normal;
+	}
+	//.header_s
+	&_s {
+		font-size: 24px;
+		line-height: 1.3;
+		font-weight: normal;
+	}
+	//.header_m
+	&_m {
+		font-size: 36px;
+		line-height: 1.2;
+		font-weight: normal;
+	}
+	//.header_form
+	&_form {
+		font-size: 18px;
+		line-height: 1.3;
+		font-weight: normal;
+		padding: @modul-m;
+		display: inline-block;
+		background-color: @color-second;
+		color: contrast(@color-second);
+	}
+  //.header_form.header_internet
+	&_form&_internet {
+    background-color: @color-product-internet;
+    color: contrast(@color-product-internet);
+  }
+  //.header_form.header_tv
+	&_form&_tv {
+    background-color: @color-product-tv;
+    color: contrast(@color-product-tv);
+  }
+  //.header_form.header_phone
+	&_form&_phone {
+    background-color: @color-product-phone;
+    color: contrast(@color-product-phone);
+  }
+  //.header_form.header_mobile
+	&_form&_mobile {
+    background-color: @color-product-mobile;
+    color: contrast(@color-product-mobile);
+  }  
+	//.header_white
+	&_white {
+		color: @color-white;
+	}
+}
+
+
+/*HEADER END*/

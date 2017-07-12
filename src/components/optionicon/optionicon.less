@@ -1,0 +1,52 @@
+/*OPTIONICON*/
+
+.optionicon {
+	display: block;
+	.box-sizing(border-box);
+	width: 55px;
+	min-width: 55px;
+	height: 55px;
+	border-radius: 50%;
+	box-shadow: inset 0px 0px 0px 1.5px @color-text;
+	overflow: hidden;
+	background-size: 39px;
+	background-attachment: scroll;
+	background-position: center center;
+	background-repeat: no-repeat;
+	//.optionicon_m
+	&_m {
+		width: 80px;
+		min-width: 80px;
+		height: 80px;
+		box-shadow: inset 0px 0px 0px 2px @color-text;
+		background-size: 46px;
+		background-attachment: scroll;
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
+	//.optionicon_white
+	&_white {
+		.filter(invert(100%));
+	}
+	&_clear {
+		box-shadow: none;
+	}
+}
+
+.optionicon-b {
+	display: block;
+	.box-sizing(border-box);
+	box-shadow: none;
+	width: 80px;
+	height: 80px;
+	border-radius: 0;
+	overflow: hidden;
+	background-size: 46px;
+	background-attachment: scroll;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+@import 'icons.less';
+
+/*OPTIONICON END*/

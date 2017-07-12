@@ -1,0 +1,29 @@
+/*SOCIAL*/
+
+.social {
+	font-size: 28px;
+	//.social__link
+	&__link {
+		display: inline-block;
+		padding: @modul-xs;
+		color: @color-text;
+		.transform(scale(1));
+		transition: transform .2s;
+		//.social__link:hover
+		&:hover {
+			.transform(scale(1.2));
+			transition: transform .2s;
+		}
+	}
+	//.social_white .social__link
+	&_white &__link {
+		color: @color-white;
+	}
+	//.social_m
+	&_m {
+		font-size: 48px;
+	}
+}
+
+
+/*SOCIAL END*/

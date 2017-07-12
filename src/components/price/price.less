@@ -1,0 +1,36 @@
+/*PRICE*/
+
+.price {
+	.box-sizing(border-box);
+	white-space: nowrap;
+	//.price__prev
+	&__prev {
+		font-family: @font-second;
+		font-size: 36px;
+		color: @color-text;
+		text-decoration: line-through;
+		display: inline-block;
+		line-height: 0;
+	}
+	//.price__new
+	&__new {
+		font-family: @font-second;
+		color: @color-second;
+		font-size: 64px;
+		display: inline-block;
+		line-height: @modul-l;
+	}
+	//.price__unit
+	&__unit {
+		color: @color-text;
+		font-size: @font-s;
+		display: inline-block;
+	}
+	//.price_dark .price__prev, .price_dark .price__unit
+	&_dark &__prev,
+	&_dark &__unit {
+		color: @color-white;
+	}
+}
+
+/*PRICE END*/

@@ -1,0 +1,126 @@
+/*CARDPACK*/
+
+.cardpack {
+	//.cardpack__head
+	&__head {
+		margin: @modul-s 0;
+	}
+	//.cardpack__description
+	&__description {
+		.flex-block();
+		.flex-direction(row);
+		.justify-content(space-between);
+		.align-items(stretch);
+		.flex-wrap(nowrap);
+		.align-content(flex-start);
+		margin: 0 -@modul-l;
+		.MEDIA_TABLET( {
+			.flex-wrap(wrap);
+			margin: 0 -@modul-l;;
+		}
+		);
+		.MEDIA_MOBILE( {
+			.flex-wrap(wrap);
+			margin: 0;
+		}
+		);
+		//.cardpack__description .card
+		.card {
+			box-shadow: none;
+			background-color: transparent;
+			border-right: @border-divider;
+			margin: 0;
+			padding: 0px 30px;
+			min-height: auto;
+			.MEDIA_TABLET( {
+				margin: 0;
+				padding: @modul-s @modul-l;
+			}
+			);
+			.MEDIA_MOBILE( {
+				border: none;
+				border-bottom: @border-divider;
+				margin: 0;
+				padding: @modul-s 0;
+			}
+			);
+			//.cardpack__description .card:first-child
+			&:first-child {
+				margin: 0 0 0 @modul-s;
+				.MEDIA_TABLET( {
+					margin: 0;
+				}
+				);
+				.MEDIA_MOBILE( {
+					margin: 0;
+				}
+				);
+			}
+			&:nth-child(even){
+				.MEDIA_TABLET( {
+					border-right:none;
+				});
+			}
+			
+			//.cardpack__description .card:last-child
+			&:last-child {
+				margin: 0 @modul-s 0 0;
+				border: none;
+				.MEDIA_TABLET( {
+					margin: 0;
+					border-bottom: none;
+				}
+				);
+				.MEDIA_MOBILE( {
+					margin: 0;
+					border-bottom: @border-divider;
+				}
+				);
+			}
+			//.cardpack__description .card .card__head
+			&__head {
+				.MEDIA_MOBILE( {
+					margin: @modul-s 0 @modul-m 0;
+				}
+				);
+			}
+		}
+	}
+	//.cardpack__footer
+	&__footer {
+		.flex-block();
+		.flex-direction(row);
+		.justify-content(flex-start);
+		.align-items(flex-end);
+		.flex-wrap(nowrap);
+		.align-content(flex-start);
+		margin: @modul-m 0 0 0;
+		.MEDIA_MOBILE( {
+			.flex-wrap(wrap);
+			.flex-direction(column);
+		}
+		);
+		//.cardpack__footer .button
+		.button {
+			.flex-basis(calc(~"100%/4" - @modul-l + @modul-xs));
+			margin: 0 @modul-m 0 0;
+			.MEDIA_MOBILE( {
+				.flex-basis(100%);
+				margin: 0;
+				.order(2);
+			}
+			);
+		}
+		//.cardpack__footer .price
+		.price {
+			.MEDIA_MOBILE( {
+				.order(1);
+				margin: @modul-m 0 @modul-s 0;
+			}
+			);
+		}
+	}
+}
+
+
+/*CARDPACK END*/

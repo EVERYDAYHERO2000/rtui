@@ -1,0 +1,113 @@
+/*CARD*/
+
+.card {
+	.layer_card();
+	.flex-grow(1);
+	.flex-shrink(1);
+	overflow: hidden;
+	padding: @modul-m;
+	.flex-block();
+	.flex-direction(column);
+	.align-items(stretch);
+	.justify-content(space-between);
+	min-height: 360px;
+	.MEDIA_MOBILE( {
+		min-width: 200px;
+	}
+	);
+	//.card__head
+	&__head {
+		.flex-block();
+		.flex-direction(row);
+		.justify-content(space-between);
+		.align-items(stretch);
+		.flex-wrap(nowrap);
+		.align-content(flex-start);
+		margin: @modul-xs 0 @modul-m 0;
+		width: 100%;
+		min-height: 55px;
+		//.card__head .option-icon
+		.option-icon {
+			margin: 0 @modul-xs;
+			//.card__head .option-icon:first-child
+			&:first-child {
+				margin: 0 @modul-xs 0 0;
+			}
+			//.card__head .option-icon:last-child
+			&:last-child {
+				margin: 0 0 0 @modul-xs;
+			}
+		}
+	}
+	//.card__description
+	&__description {
+		width: 100%;
+	}
+	//.card__footer
+	&__footer {
+		width: 100%;
+		.flex-grow(1);
+		.flex-block();
+		.flex-direction(column);
+		.justify-content(flex-end);
+		.align-items(stretch);
+		.flex-wrap(nowrap);
+		.align-content(flex-start);
+		//.card__footer .price
+		.price {
+			text-align: right;
+			margin: @modul-m 0 @modul-s 0;
+		}
+	}
+	//.card_tarif
+	&_tarif {}
+	//.card_tizer
+	&_tizer {}
+  //.card_tizer.card_internet
+  &_tizer&_internet {
+    background: @color-product-internet;
+  }
+  //.card_tizer.card_tv
+  &_tizer&_tv {
+    background: @color-product-tv;
+  }
+  //.card_tizer.card_phone
+  &_tizer&_phone {
+    background: @color-product-phone;
+  }
+  //.card_tizer.card_mobile
+  &_tizer&_mobile {
+    background: @color-product-mobile;
+  }
+	//.card_3
+	&_3 {
+		.flex-basis(calc(~"(100%/4) * 3" - @modul-xl));
+		.MEDIA_TABLET( {
+			.flex-basis(calc(~"100%/2" - @modul-m));
+		}
+		);
+	}
+	//.card_2
+	&_2 {
+		.flex-basis(calc(~"100%/2" - @modul-xl));
+		.MEDIA_TABLET( {
+			order: 1;
+			//.card_2+.card_2
+			& + & {
+				.flex-basis(calc(~"100%/2" - @modul-xl));
+			}
+		}
+		);
+	}
+	//.card_1
+	&_1 {
+		.flex-basis(calc(~"100%/4" - @modul-xl));
+		.MEDIA_TABLET( {
+			.flex-basis(calc(~"100%/2" - @modul-m));
+		}
+		);
+	}
+}
+
+
+/*CARD END*/

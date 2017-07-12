@@ -1,0 +1,28 @@
+/*BADGE*/
+
+.badge {
+	width: 170px;
+	height: 50px;
+	background-color: #000;
+	border-radius: 5px;
+	display: inline-block;
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	background-size: cover;
+	.box-sizing(border-box);
+	//.badge_google-play
+	&_google-play {
+		background-image: url('@{URL}badge/img/badges_google-play.svg');
+	}
+	//.badge_app-store
+	&_app-store {
+		background-image: url('@{URL}badge/img/badges_app-store.svg');
+	}
+	//.badge_gray
+	&_gray {
+		opacity: 0.5;
+	}
+}
+
+
+/*BADGE END*/

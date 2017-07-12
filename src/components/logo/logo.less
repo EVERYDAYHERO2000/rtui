@@ -1,0 +1,48 @@
+/*LOGO*/
+
+@logo-width : 150px;
+@logo-width_mobile : 30px;
+.logo {
+	font-size: 18px;
+	font-weight: normal;
+	font-family: @font-second;
+	margin: 0;
+	padding: 0;
+	white-space: nowrap;
+	color: @color-text;
+	overflow: hidden;
+	font-weight: 600;
+	.flex-block();
+	.flex-direction(row);
+	.justify-content(flex-start);
+	.flex-wrap(nowrap);
+	.align-content(stretch);
+	.align-items(center);
+	//.logo::before
+	&::before {
+		content: '';
+		display: block;
+		background-image: url('@{URL}logo/img/logo-rt.svg');
+		background-position: left center;
+		background-attachment: scroll;
+		background-repeat: no-repeat;
+		background-size: @logo-width auto;
+		height: 50px;
+		width: 100%;
+		.box-sizing(border-box);
+	}
+	//.logo_icon
+	&_icon {
+		//.logo_icon::before
+		&::before {
+			content: '';
+			width: @logo-width_mobile;
+		}
+	}
+	span {
+		transform: translate(0, 2px);
+	}
+}
+
+
+/*LOGO END*/

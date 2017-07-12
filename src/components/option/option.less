@@ -1,0 +1,98 @@
+/*OPTION*/
+
+.option {
+	.box-sizing(border-box);
+	background-color: @color-white;
+	padding: @modul-m;
+	width: 100%;
+	border-bottom: @border-divider;
+	min-height: 100px;
+	.flex-block();
+	.flex-direction(row);
+	.justify-content(space-between);
+	.align-items(stretch);
+	.flex-wrap(nowrap);
+	.align-content(stretch);
+	//.option__part
+	&__part {
+		.flex-block();
+		.flex-direction(row);
+		.justify-content(flex-start);
+		.align-items(stretch);
+		.flex-wrap(nowrap);
+		.align-content(stretch);
+	}
+	//.option__icon
+	&__icon {
+		margin: 0 @modul-m 0 0;
+		.flex-block();
+		.flex-direction(column);
+		.justify-content(center);
+		.flex-wrap(nowrap);
+		.align-content(flex-start);
+	}
+	//.option__description
+	&__description {
+		margin: -@modul-s 0 0 0;
+		.flex-block();
+		.flex-direction(column);
+		.justify-content(center);
+		.align-items(stretch);
+		.flex-wrap(nowrap);
+		.align-content(flex-start);
+		//.option__description p:first-of-type
+		p:first-of-type {
+			margin-bottom: -@modul-s;
+		}
+	}
+	//.option__edit
+	&__edit {
+		margin: 0 0 0 @modul-s;
+		display: none;
+		pointer-events: none;
+	}
+	//.option__remove
+	&__remove {
+		width: @modul-m;
+		height: @modul-m;
+		display: none;
+		pointer-events: none;
+		//.option__remove:before
+		&:before {
+			display: inline-block;
+			font-family: FontAwesome;
+			font-size: 18px;
+			text-rendering: auto;
+			.prefix(font-smoothing, antialiased);
+			color: @color-text;
+			content: '\f068';
+			text-align: center;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	//.option_editable .option__edit
+	&_editable &__edit {
+		display: inline;
+		pointer-events: all;
+	}
+	//.option_removable .option__remove
+	&_removable &__remove {
+		cursor: pointer;
+		display: block;
+		pointer-events: all;
+		.transform(scale(1));
+		transition: transform .2s;
+		//.option_removable .option__remove:active
+		&:active {
+			cursor: pointer;
+			display: block;
+			pointer-events: all;
+			.transform(scale(0.7));
+			transition: transform .2s;
+		}
+	}
+}
+
+
+/*OPTION END*/

@@ -1,0 +1,115 @@
+/*INPUT*/
+
+.input {
+	box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.17);
+	border: none;
+	font-size: @font-s;
+	border-radius: @radius-input;
+	.box-sizing(border-box);
+	//.input input
+	input {
+		width: 100%;
+		height: 100%;
+		.box-sizing(border-box);
+		border-radius: @radius-input;
+		font-size: @font-s;
+		padding: @modul-s;
+		border: none;
+		background-color: @color-white;
+		box-shadow: 0px 0px 3px 0px rgba(255, 255, 255, 0);
+		transition: box-shadow .3s;
+		//.input input:focus
+		&:focus {
+			outline: none;
+			box-shadow: 0px 0px 1px 1px @color-ui;
+			transition: box-shadow .3s;
+		}
+		//.input input::placeholder
+		.placeholder( {
+			opacity: 0.5;
+		}
+		);
+	}
+	//.input__message
+	&__message {
+		color: @color-alert;
+		float: right;
+		display: inline-block;
+		.transform(translate(-@modul-s, -25px));
+		opacity: 0;
+		transition: opacity .2s;
+	}
+	//.input_toplabel
+	&_toplabel {
+		margin: 30px 0 0 0;
+		//.input_toplabel label
+		label {
+			position: absolute;
+			.transform(translate(0px, -@modul-m));
+			.user-select(none);
+		}
+	}
+	//.input_alert
+	&_alert {
+		box-shadow: 0px 0px 0px 1px lighten(@color-alert, 30%);
+		//.input_alert input
+		input {
+			background: lighten(@color-alert, 45%);
+		}
+		//.input_alert input:focus
+		input:focus {
+			outline: none;
+			box-shadow: 0px 0px 1px 1px @color-alert;
+			transition: box-shadow .3s;
+		}
+	}
+	//.input_alert .input__message
+	&_alert &__message {
+		opacity: 1;
+		transition: opacity .2s;
+	}
+	//.input_m
+	&_m {
+		//.input_m input
+		input {
+			font-size: @font-m;
+			padding: @modul-xs * 3;
+		}
+	}
+	//.input_search
+	&_search {
+		//.input_search input
+		input {
+			font-size: @font-m;
+			padding: @modul-xs * 3;
+		}
+		//.input_search:after
+		&:after {
+			content: '\f002';
+			font-family: FontAwesome;
+			font-size: 18px;
+			text-align: center;
+			line-height: @modul-xs * 3;
+			width: @modul-m;
+			height: @modul-m;
+			display: inline-block;
+			float: right;
+			.transform(translate(-@modul-xs * 3, -@modul-s * 3));
+			pointer-events: none;
+			margin-bottom: -@modul-m;
+			opacity: 0.2;
+		}
+	}
+	//.input_disabled
+	&_disabled {
+		opacity: 0.5;
+		//.input_disabled input
+		input {
+			pointer-events: none;
+			cursor: default;
+		}
+	}
+}
+
+
+/*INPUT END*/

@@ -1,0 +1,42 @@
+/*DIVIDER*/
+
+.divider {
+	display: table;
+	white-space: nowrap;
+	height: auto;
+	line-height: 1;
+	text-align: center;
+	margin: @modul-s 0;
+	width: 100%;
+	//.divider:before,.divider:after
+	&:before,
+	&:after {
+		content: '';
+		display: table-cell;
+		.box-sizing(border-box);
+		width: 50%;
+		border-bottom: @border-divider;
+	}
+	//.divider *
+	* {
+		margin: 0 10px;
+		line-height: 1;
+		transform: translate(0, 50%);
+		position: relative;
+	}
+	//.divider_white
+	&_white {
+		//.divider_white:before,.divider_white:after
+		&:before,
+		&:after {
+			border-bottom: @border-divider-white;
+		}
+		//.divider_white * 
+		* {
+			color: @color-white;
+		}
+	}
+}
+
+
+/*DIVIDER END*/

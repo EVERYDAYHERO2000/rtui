@@ -1,0 +1,41 @@
+/*TEXT*/
+
+.text {
+	font-family: @font-main;
+	color: @color-text;
+	line-height: 1.45;
+	hyphens: auto;
+	//.text_xs
+	&_xs {
+		font-size: @font-xs;
+		line-height: 1.2;
+		letter-spacing: 0.3px;
+	}
+	//.text_s
+	&_s {
+		font-size: @font-s;
+	}
+	//.text_m
+	&_m {
+		font-size: @font-m;
+	}
+	//.text_description
+	&_description {
+		opacity: .5;
+	}
+	//.text_white
+	&_white {
+		color: @color-white;
+	}
+	strong {}
+	b {}
+	abbr {
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		text-decoration: none;
+		border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+		white-space: nowrap;
+	}
+}
+
+/*TEXT END*/

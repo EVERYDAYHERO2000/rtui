@@ -1,0 +1,68 @@
+/*SELECT*/
+
+.select {
+	box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.17);
+	border-radius: @radius-input;
+	//.select select
+	select {
+		.box-sizing(border-box);
+		.prefix(appearance, none);
+		.user-select(none);
+		border: none;
+		font-size: @font-s;
+		padding: @modul-s;
+		border-radius: @radius-input;
+		background-color: @color-white;
+		width: 100%;
+		display: block;
+		box-shadow: 0px 0px 3px 0px rgba(255, 255, 255, 0);
+		transition: box-shadow 0.3s;
+		//.select select:focus
+		&:focus {
+			outline: none;
+			box-shadow: 0px 0px 1px 1px @color-ui;
+			transition: box-shadow 0.3s;
+		}
+	}
+	//.select:after
+	&:after {
+		font-family: FontAwesome;
+		font-size: 18px;
+		text-align: center;
+		line-height: 27px;
+		width: @modul-m;
+		height: @modul-m;
+		display: inline-block;
+		content: '\f107';
+		float: right;
+		.transform(translate(-@modul-s, -30px));
+		pointer-events: none;
+		margin-bottom: -@modul-m;
+	}
+	//.select_toplabel
+	&_toplabel {
+		margin: 30px 0 0 0;
+		//.select label
+		label {
+			position: absolute;
+			.transform(translate(0px, -@modul-m));
+			.user-select(none);
+		}
+	}
+	//.select_disabled
+	&_disabled {
+		opacity: 0.5;
+		//.select_disabled select
+		select {
+			pointer-events: none;
+			cursor: default;
+		}
+		//.select_disabled:after
+		&:after {
+			opacity: 0.5;
+		}
+	}
+}
+
+
+/*SELECT END*/

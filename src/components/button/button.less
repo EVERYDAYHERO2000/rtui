@@ -1,0 +1,149 @@
+/*BUTTON*/
+
+.button {
+	background-color: @color-main;
+	font-family: @font-main;
+	text-align: center;
+	color: contrast(@color-main);
+	font-size: @font-m;
+	text-decoration: none;
+	border-radius: @radius-button;
+	padding: 15px 25px;
+	display: block;
+	.transform(scale(1));
+	opacity: 1;
+	transition: transform .3s, opacity .3s;
+	width: 100%;
+	box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.02);
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	cursor: pointer;
+	.user-select(none);
+	.box-sizing(border-box);
+	//.button:hover
+	&:hover {
+		.transform(scale(1));
+		opacity: .85;
+		transition: transform .3s, opacity .3s;
+		.MEDIA_MOBILE({
+			opacity: 1;
+		});
+	}
+	//.button:active
+	&:active {
+		.transform(scale(0.98));
+		opacity: .85;
+		transition: transform .2s, opacity .2s;
+		.MEDIA_MOBILE({
+			opacity: 1;
+		});
+	}
+	//.button_autosize
+	&_autosize {
+		display: inline-block;
+		width: auto;
+	}
+	//.button_disabled, .button:disabled
+	&_disabled,
+	&:disabled {
+		display: inline-block;
+		width: auto;
+		opacity: 0.5;
+		pointer-events: none;
+		.transform(scale(1));
+		transition: transform .2s, opacity .2s;
+	}
+	//.button_main
+	&_main {
+		background-color: @color-second;
+		color: contrast(@color-second);
+	}
+	//.button_white
+	&_white {
+		background-color: @color-white;
+		color: contrast(@color-white);
+	}
+  //.button_internet
+	&_internet {
+		background-color: @color-product-internet;
+		color: contrast(@color-product-internet);
+	}
+  //.button_tv
+	&_tv {
+		background-color: @color-product-tv;
+		color: contrast(@color-product-tv);
+	}
+  //.button_phone
+	&_phone {
+		background-color: @color-product-phone;
+		color: contrast(@color-product-phone);
+	}
+  //.button_mobile
+	&_mobile {
+		background-color: @color-product-mobile;
+		color: contrast(@color-product-mobile);
+	}
+	//.button_line
+	&_line {
+		background-color: transparent;
+		box-shadow: inset 0px 0px 0px 2px @color-main;
+		color: @color-main;
+	}
+	//.button_main.button_line
+	&_main&_line {
+		background-color: transparent;
+		box-shadow: inset 0px 0px 0px 2px @color-second;
+		color: @color-second;
+	}
+	//.button_white.button_line
+	&_white&_line {
+		background-color: transparent;
+		box-shadow: inset 0px 0px 0px 2px @color-white;
+		color: @color-white;
+	}
+  //.button_internet.button_line
+	&_internet&_line {
+		background-color: transparent;
+		box-shadow: inset 0px 0px 0px 2px @color-product-internet;
+		color: @color-product-internet;
+	}
+  //.button_tv.button_line
+	&_tv&_line {
+		background-color: transparent;
+		box-shadow: inset 0px 0px 0px 2px @color-product-tv;
+		color: @color-product-tv;
+	}
+  //.button_phone.button_line
+	&_phone&_line {
+		background-color: transparent;
+		box-shadow: inset 0px 0px 0px 2px @color-product-phone;
+		color: @color-product-phone;
+	}
+  //.button_mobile.button_line
+	&_mobile&_line {
+		background-color: transparent;
+		box-shadow: inset 0px 0px 0px 2px @color-product-mobile;
+		color: @color-product-mobile;
+	}
+	//.button:focus
+	&:focus {
+		outline: none;
+	}
+	//.button .fa
+	.fa {
+		.transform(translate(-@modul-s, 0));
+	}
+	//.button_s
+	&_s {
+		font-size: @font-s;
+		padding: @modul-s @modul-m;
+		//.button_s .fa
+		.fa {
+			.transform(translate(-@modul-s + 2px, 0));
+		}
+	}
+}
+
+
+/*BUTTON END*/
