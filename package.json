@@ -2,9 +2,9 @@
   "name": "rt.ui",
   "version": "0.1.0",
   "private": true,
-	"repository" : { 
-	"type" : "git", 
-	"url" : "https://github.com/EVERYDAYHERO2000/rtui.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EVERYDAYHERO2000/rtui.git"
   },
   "dependencies": {
     "react": "^15.6.1",
@@ -19,6 +19,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "jsdoc": "^3.5.2",
     "less-watch-compiler": "^1.6.7"
   }
 }
