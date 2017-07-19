@@ -1,36 +1,60 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-class Text extends Component {
-  render() {
-		var content = this.props.content;
-		
-		var size = (function(s){
-		var size;
-		switch (s) {
-			case 'xs':
-				size = 'text_xs';
-				break;
-			case 's':
-				size = 'text_s';
-				break;
-			case 'm':
-				size = 'text_m';
-				break;
-			case 'l':
-				size = 'text_l';
-				break;	
-			default :
-				size = '';
-				break;	
-		}
-			return size;	
-		})(this.props.size);
 
-		
-    return (
-      <p className={['text', size].join(' ')}>{content}</p>
-    );
-  }
+export default function Text({ color, description, size, children }) {
+	const classList = [ 
+		'text', 
+		Text.size[size], 
+		Text.color[color], 
+		Text.description[description]
+	].join(' ').trim(); 
+	
+	return (
+		<p className={classList}>
+			{children}
+		</p>
+	);
 }
 
-export default Text;
+Text.propTypes = {
+	/**
+	 * Текст:
+	 */
+	children: PropTypes.node.isRequired,
+	/**
+	 * Размер:
+	 */
+	size: PropTypes.oneOf(['xs', 's', 'm']),
+	/**
+	 * Цвет:
+	 */
+	color: PropTypes.oneOf(['none', 'white']),
+	/**
+	 * Полупрозрачный:
+	 */	
+	description: PropTypes.oneOf(['off','on'])
+};
+
+Text.defaultProps = {
+	size: 'm',
+	color: 'none',
+	description: 'off'
+};
+
+Text.size = {
+	xs: 'text_xs',
+	s: 'text_s',
+	m: 'text_m'
+};
+
+Text.color = {
+	none: '',
+	white: 'text_white'
+};
+
+Text.description = {
+	off: '',
+	on: 'text_description'
+};
+
