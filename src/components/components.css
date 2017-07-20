@@ -2281,8 +2281,10 @@ template {
   line-height: 40px;
 }
 .price__unit {
+  font-family: Helvetica, Arial, sans-serif;
   color: #353535;
   font-size: 13px;
+  white-space: pre;
   display: inline-block;
 }
 .price_dark .price__prev,

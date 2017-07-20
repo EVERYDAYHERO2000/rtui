@@ -2,20 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-export default function Button({ color, size, line, autosize, children, tagName, href }) {
+export default function Button({ icon, color, size, line, autosize, children, tagName, href }) {
 	const classList = [ 
 		'button', 
 		Button.size[size], 
 		Button.color[color], 
 		Button.line[line], 
 		Button.autosize[autosize] 
-	].join(' ').trim(); 
+	].join(' ').trim().replace(/\s+/g,' '); 
 	
 	const ButtonType = `${Button.tagName[tagName]}`;
-
-	
+			
 	return (
-		<ButtonType href={(tagName === 'a') ? '' : href} className={classList}>
+		<ButtonType 
+			href={(tagName === 'a') ? '' : href} 
+			className={classList}>
+			{(icon) ? <i className={'fa ' + icon}></i> : ''}
 			{children}
 		</ButtonType>
 	);
@@ -32,8 +34,12 @@ Button.propTypes = {
 	href: PropTypes.string,
 	/**
 	 * Размер:
-	 */	
+	 */
 	size: PropTypes.oneOf(['none', 's']),
+	/**
+	 * Иконка:
+	 */
+	icon: PropTypes.string,	
 	/**
 	 * Цает кнопки:
 	 */

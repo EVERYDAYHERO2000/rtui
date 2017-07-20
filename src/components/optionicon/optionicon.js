@@ -8,7 +8,7 @@ export default function OptionIcon({ color, size, icon, border }) {
 		OptionIcon.color[color],
 		OptionIcon.size[size],
 		OptionIcon.border[border]
-	].join(' ').trim(); 
+	].join(' ').trim().replace(/\s+/g,' '); 
 	
 	
 	

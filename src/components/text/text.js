@@ -8,7 +8,7 @@ export default function Text({ color, description, size, children }) {
 		Text.size[size], 
 		Text.color[color], 
 		Text.description[description]
-	].join(' ').trim(); 
+	].join(' ').trim().replace(/\s+/g,' '); 
 	
 	return (
 		<p className={classList}>

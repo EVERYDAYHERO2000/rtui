@@ -7,7 +7,7 @@ export default function Header({ color, size, children }) {
 		'header', 
 		Header.size[size], 
 		Header.color[color]
-	].join(' ').trim(); 
+	].join(' ').trim().replace(/\s+/g,' '); 
 	
 	const HeaderType = `${Header.tagName[size]}`;
 	
