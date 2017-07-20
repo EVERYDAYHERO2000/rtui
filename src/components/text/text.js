@@ -21,7 +21,12 @@ Text.propTypes = {
 	/**
 	 * Текст:
 	 */
-	children: PropTypes.node.isRequired,
+	children: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.node,
+		PropTypes.element
+  ]),
 	/**
 	 * Размер:
 	 */

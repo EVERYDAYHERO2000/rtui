@@ -695,6 +695,10 @@ template {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
 }
 .button:hover {
   -webkit-transform: scale(1);

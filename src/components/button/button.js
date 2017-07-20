@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-export default function Button({ color, size, line, autosize, children }) {
+export default function Button({ color, size, line, autosize, children, tagName, href }) {
 	const classList = [ 
 		'button', 
 		Button.size[size], 
@@ -11,10 +11,13 @@ export default function Button({ color, size, line, autosize, children }) {
 		Button.autosize[autosize] 
 	].join(' ').trim(); 
 	
+	const ButtonType = `${Button.tagName[tagName]}`;
+
+	
 	return (
-		<div className={classList}>
+		<ButtonType href={(tagName === 'a') ? '' : href} className={classList}>
 			{children}
-		</div>
+		</ButtonType>
 	);
 }
 
@@ -24,8 +27,12 @@ Button.propTypes = {
 	 */
 	children: PropTypes.string.isRequired,
 	/**
-	 * Размер:
+	 * Ссылка:
 	 */
+	href: PropTypes.string,
+	/**
+	 * Размер:
+	 */	
 	size: PropTypes.oneOf(['none', 's']),
 	/**
 	 * Цает кнопки:
@@ -38,14 +45,19 @@ Button.propTypes = {
 	/**
 	 * Авторазмер по содержимому:
 	 */	
-	autosize: PropTypes.oneOf(['off','on'])
+	autosize: PropTypes.oneOf(['off','on']),
+	/**
+	 * Тэг элемента:
+	 */	
+	tagName: PropTypes.oneOf(['div','a', 'button'])
 };
 
 Button.defaultProps = {
 	size: 'none',
 	color: 'none',
 	line: 'off',
-	autosize: 'off'
+	autosize: 'off',
+	tagName: 'a'
 };
 
 Button.size = {
@@ -77,3 +89,9 @@ Button.autosize = {
 	off: '',
 	on: 'button_autosize'
 };
+
+Button.tagName = {
+	div: 'div',
+	a: 'a',
+	button: 'button'
+}

@@ -10,10 +10,10 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-scripts": "1.0.10",
-		"react-modal": "^1.6.5",
+    "react-modal": "^1.6.5",
     "react-styleguidist": "^5.0.0",
     "less": "^2.7.2",
-		"dog-names": "^1.0.2",
+    "dog-names": "^1.0.2",
     "loaders": "^1.1.2",
     "lodash": "^4.17.4",
     "preact": "^7.2.0",
@@ -26,12 +26,14 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-		"styleguide": "styleguidist server",
-		"styleguide:build": "styleguidist build"
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build"
   },
   "devDependencies": {
     "jsdoc": "^3.5.2",
     "less-watch-compiler": "^1.6.7",
-    "react-styleguidist": "^5.5.7"
+    "react-styleguidist": "^5.5.7",
+    "svg-inline-loader": "^0.8.0",
+    "svg-inline-react": "^2.1.0"
   }
 }

@@ -1,6 +1,6 @@
 Кнопка:
 
-    <Button>Подключить</Button>
+    <Button href="#" >Подключить</Button>
 		
 Кнопка обводкой: 
 
@@ -8,7 +8,7 @@
 		
 Кнопка с автодлиной:		
 
-		<Button autosize="on">Подключить</Button>
+		<Button tagName="button" autosize="on">Подключить</Button>
 		
 Кнопка с автодлиной для интернета:		
 
