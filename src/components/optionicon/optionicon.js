@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-
 export default function OptionIcon({ color, size, icon, border }) {
 	const classList = [ 
 		'optionicon', 

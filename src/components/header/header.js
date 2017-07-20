@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-export default function Header({ color, type, children }) {
+export default function Header({ color, size, children }) {
 	const classList = [ 
 		'header', 
-		Header.type[type], 
+		Header.size[size], 
 		Header.color[color]
 	].join(' ').trim(); 
 	
-	const HeaderType = `${Header.tagName[type]}`;
+	const HeaderType = `${Header.tagName[size]}`;
 	
 	return (
 		<HeaderType className={classList}>
@@ -26,7 +26,7 @@ Header.propTypes = {
 	/**
 	 * Размер:
 	 */
-	type: PropTypes.oneOf(['promo','xs', 's', 'm','form','internet','tv','phone','mobile']),
+	size: PropTypes.oneOf(['promo','xs', 's', 'm','form','internet','tv','phone','mobile']),
 	/**
 	 * Цвет:
 	 */
@@ -34,11 +34,11 @@ Header.propTypes = {
 };
 
 Header.defaultProps = {
-	type: 'm',
+	size: 'm',
 	color: 'none'
 };
 
-Header.type = {
+Header.size = {
 	promo: 'header_promo',
 	xs: 'header_xs',
 	s: 'header_s',
