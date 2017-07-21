@@ -2,4 +2,4 @@
 
 [Wiki](https://github.com/EVERYDAYHERO2000/rtui/wiki)
 
-[ui](https://github.com/EVERYDAYHERO2000/rtui/wiki/ui:-настройка) – инструкия
+[ui](https://github.com/EVERYDAYHERO2000/rtui/wiki/ui__настройка) – инструкия
