@@ -1,35 +1,35 @@
 Кнопка:
 
-    <Button href="#" >Подключить</Button>
+    <Button href="#" text="Подключить" />
 		
 Кнопка обводкой: 
 
-		<Button line="on">Подключить</Button>
+		<Button theme="line" text="Подключить" />
 		
 Кнопка с автодлиной:		
 
-		<Button tagName="button" autosize="on">Подключить</Button>
+		<Button type="button" autosize="true" text="Подключить" />
 		
 Кнопка с автодлиной для интернета:		
 
-		<Button autosize="on" color="internet">Подключить интернет</Button>		
+		<Button autosize="true" rt="internet" text="Подключить интернет" />	
 		
 Мелкая кнопка:		
 
-		<Button autosize="on" size="s">Отправить</Button>	
+		<Button autosize="true" size="s" text="Отправить" />
 		
 Мелкая контурная кнопка для мобильной связи:		
 
-		<Button autosize="on" size="s" line="on" color="mobile">Отправить</Button>	
+		<Button autosize="true" size="s" theme="line" rt="mobile" text="Отправить" />
 			
 Кнопка c иконкой:
 
-    <Button icon="fa-plus" autosize="on" href="#" >Подключить</Button>	
+    <Button icon="fa-plus" autosize="true" href="#" text="Подключить" />	
 		
 Контурная кнопка c иконкой:
 
-    <Button icon="fa-plus" autosize="on" href="#" color="tv" line="on" >Подключить</Button>		
+    <Button icon="fa-plus" autosize="true" href="#" rt="tv" theme="line"  text="Подключить" />		
 		
 Мелкая кнопка c иконкой:
 
-    <Button icon="fa-plus" autosize="on" href="#" color="tv" line="on" size="s" >Подключить</Button>					
+    <Button icon="fa-plus" autosize="true" href="#" rt="tv" theme="line" size="s" text="Подключить" />					

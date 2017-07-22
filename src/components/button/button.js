@@ -2,23 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-export default function Button({ icon, color, size, line, autosize, children, tagName, href }) {
+export default function Button({ text, theme, type, rt, icon, size, autosize, href }) {
 	const classList = [ 
 		'button', 
-		Button.size[size], 
-		Button.color[color], 
-		Button.line[line], 
+		Button.size[size],  
+		Button.theme[theme], 
+    Button.rt[rt],  
 		Button.autosize[autosize] 
 	].join(' ').trim().replace(/\s+/g,' '); 
 	
-	const ButtonType = `${Button.tagName[tagName]}`;
+	const ButtonType = `${Button.type[type]}`;  
 			
 	return (
 		<ButtonType 
-			href={(tagName === 'a') ? '' : href} 
+			href={(type === 'a') ? '' : href} 
 			className={classList}>
 			{(icon) ? <i className={'fa ' + icon}></i> : ''}
-			{children}
+			{text}
 		</ButtonType>
 	);
 }
@@ -27,7 +27,7 @@ Button.propTypes = {
 	/**
 	 * Текст на кнопке:
 	 */
-	children: PropTypes.string.isRequired,
+	text: PropTypes.string.isRequired,
 	/**
 	 * Ссылка:
 	 */
@@ -35,68 +35,63 @@ Button.propTypes = {
 	/**
 	 * Размер:
 	 */
-	size: PropTypes.oneOf(['none', 's']),
+	size: PropTypes.oneOf(['m', 's']),
 	/**
 	 * Иконка:
 	 */
 	icon: PropTypes.string,	
 	/**
-	 * Цает кнопки:
-	 */
-	color: PropTypes.oneOf(['none','main', 'white', 'second', 'internet', 'tv','phone','mobile']),
-	/**
-	 * Контурная кнопка:
+	 * Тема:
 	 */	
-	line: PropTypes.oneOf(['off','on']),
+	theme: PropTypes.oneOf(['default','line']),
 	/**
 	 * Авторазмер по содержимому:
 	 */	
-	autosize: PropTypes.oneOf(['off','on']),
+	autosize: PropTypes.oneOf(['true','false']),
 	/**
-	 * Тэг элемента:
+	 * Тип элемента:
 	 */	
-	tagName: PropTypes.oneOf(['div','a', 'button'])
+	type: PropTypes.oneOf(['div','a', 'button']),
+	/**
+	 * Услуга (цвет):
+	 */	
+	rt: PropTypes.oneOf(['none', 'main', 'internet','tv', 'phone', 'mobile'])    
+    
 };
 
 Button.defaultProps = {
-	size: 'none',
-	color: 'none',
-	line: 'off',
-	autosize: 'off',
-	tagName: 'a'
+	size: 'm',
+	theme: 'default',
+	autosize: 'false',
+	type: 'a',
+  rt: 'none'    
 };
 
 Button.size = {
-	none : '',
-	xs: 'button_xs',
 	s: 'button_s',
-	m: 'button_m',
-	l: 'button_l',
-	xl: 'button_xl'
+	m: 'button_m'
 };
 
-Button.color = {
+Button.theme = {
+	default: '',
+	line: 'button_line'
+};
+
+Button.rt = {
 	none: '',
 	main: 'button_main',
-	white: 'button_white',
-	second: 'button_second',
-	internet: 'button_internet',
-	tv: 'button_tv',
-	phone: 'button_phone',
-	mobile: 'button_mobile'
-};
-
-Button.line = {
-	off: '',
-	on: 'button_line'
+  internet: 'button_internet',
+  tv: 'button_tv',
+  phone: 'button_phone',
+  mobile: 'button_mobile'    
 };
 
 Button.autosize = {
-	off: '',
-	on: 'button_autosize'
+	false: '',
+	true: 'button_autosize'
 };
 
-Button.tagName = {
+Button.type = {
 	div: 'div',
 	a: 'a',
 	button: 'button'

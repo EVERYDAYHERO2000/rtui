@@ -24,7 +24,7 @@ export default function Card({ color, size, border }) {
 					</div>
 					<div className="card__footer">
 						<Price prewprice="850" newprice="600" period="m" />
-						<Button href="#">Подключить</Button>
+						<Button href="#" text="Подключить" />
 					</div>
 		</div>
 	);
