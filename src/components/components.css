@@ -530,6 +530,7 @@ template {
 /*LINK*/
 .link {
   text-decoration: none;
+  font-family: Helvetica, Arial, sans-serif;
   color: #019fe8;
   opacity: 1;
   transition: opacity .2s;
@@ -1037,36 +1038,26 @@ template {
 .card_tarif.card_special .price__unit {
   color: #FFFFFF;
 }
-.card_tarif.card_special .button {
-  background: #FFFFFF;
+.card_tarif.card_special .button.button_line {
+  background-color: transparent;
+  box-shadow: inset 0px 0px 0px 2px #FFFFFF;
+  color: #FFFFFF;
 }
 .card_tarif.card_internet.card_special {
   background: #48BBAF;
   color: #ffffff;
 }
-.card_tarif.card_internet.card_special .button {
-  color: #48BBAF;
-}
 .card_tarif.card_tv.card_special {
   background: #F96753;
   color: #ffffff;
-}
-.card_tarif.card_tv.card_special .button {
-  color: #F96753;
 }
 .card_tarif.card_phonet.card_special {
   background: #F4864E;
   color: #ffffff;
 }
-.card_tarif.card_phonet.card_special .button {
-  color: #F4864E;
-}
 .card_tarif.card_mobile.card_special {
   background: #9478D1;
   color: #ffffff;
-}
-.card_tarif.card_mobile.card_special .button {
-  color: #9478D1;
 }
 .card_tizer.card_internet {
   background: #48BBAF;

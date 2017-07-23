@@ -9,11 +9,12 @@ export default function Card({ rt, type, data, special }) {
     Card.special[special]  
 	].join(' ').trim().replace(/\s+/g,' '); 
 	
-	const icons = data.options.map(function(e,i){
+	const icons = (Card.type[type]) ? data.options.map(function(e,i){
     return (
        <OptionIcon key={i} icon={e.icon} /> 
     );
-  });
+  }) : '';
+
 	
 	return (
 		<div className={classList}>
@@ -25,8 +26,14 @@ export default function Card({ rt, type, data, special }) {
 						<Text size="s">{data.description}</Text>
 					</div>
 					<div className="card__footer">
-				    <Price rt={ (rt) ? rt : '' } data={data.price} />
-						<Button rt={ (rt) ? rt : '' } link={data.link} text="Подключить" />
+				    <Price 
+							rt={ (rt) ? rt : '' } 
+							data={data.price} />
+						<Button 
+							rt={ (rt) ? rt : '' } 
+							theme={ (special) ? 'line' : 'default' } 
+							link={data.link} 
+							text="Подключить" />
 					</div>
 		</div>
 	);
