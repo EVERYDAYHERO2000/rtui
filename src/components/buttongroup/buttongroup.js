@@ -17,6 +17,7 @@ export default function Buttongroup({ type, rt, size, data }) {
 					htmlFor={buttonId} 
 					name={buttonGroupId} 
 					checked={(e.checked)? e.checked : ''}
+					
 					/>	
        <Button 
 					id={buttonId}
@@ -27,6 +28,7 @@ export default function Buttongroup({ type, rt, size, data }) {
 					autosize="true"
 					icon={(e.icon)? e.icon : ''}
 					text={e.text}
+					
 					/>
 			 </div>		
 		);
