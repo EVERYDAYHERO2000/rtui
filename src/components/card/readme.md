@@ -1,6 +1,7 @@
 Карточка тарифа:
 
-    <Card type="tarif" data={{
+    <Card type="tarif" data={
+		{
         title:'Максимум', 
         description:'Включает СТАРТОВЫЙ + спортивные, детские и музыкальные телеканалы + познавательные телеканалы + дополнительный пакет ТВОЁ КИНО',
         link: '#',
@@ -26,11 +27,13 @@
                 description: '',
                 icon: 'optionicon_5'
             }
-        ] }} />
+        ] }
+				} />
         
 Карточка тарифа услуги интернет:
 
-    <Card rt="internet" type="tarif" data={{
+    <Card rt="internet" type="tarif" data={
+		{
         title:'Максимум', 
         description:'Включает СТАРТОВЫЙ + спортивные, детские и музыкальные телеканалы + познавательные телеканалы + дополнительный пакет ТВОЁ КИНО',
         link: '#',
@@ -56,11 +59,13 @@
                 description: '',
                 icon: 'optionicon_5'
             }
-        ] }} />        
+        ] }
+				} />        
 				
 Карточка тарифа услуги интернет:
 
-    <Card rt="tv" special="true" type="tarif" data={{
+    <Card rt="tv" special="true" type="tarif" data={
+		{
         title:'Максимум', 
         description:'Включает СТАРТОВЫЙ + спортивные, детские и музыкальные телеканалы + познавательные телеканалы + дополнительный пакет ТВОЁ КИНО',
         link: '#',
@@ -86,4 +91,5 @@
                 description: '',
                 icon: 'optionicon_5'
             }
-        ] }} />        				
+        ] }
+				} />        				
