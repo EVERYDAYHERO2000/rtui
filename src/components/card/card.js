@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Card({ rt, type, data }) {
+export default function Card({ rt, type, data, special }) {
 	const classList = [ 
 		'card', 
 		Card.type[type],
-		Card.rt[rt]
+		Card.rt[rt],
+    Card.special[special]  
 	].join(' ').trim().replace(/\s+/g,' '); 
 	
 	const icons = data.options.map(function(e,i){
@@ -40,6 +41,10 @@ Card.propTypes = {
 	 * Услуга (цвет):
 	 */	
 	rt: PropTypes.oneOf(['none', 'main', 'internet','tv', 'phone', 'mobile']), 
+	/**
+	 * Акция:
+	 */	
+	special: PropTypes.oneOf(['false', 'true']),     
 		/**
 	 * Рамка:
 	 */
@@ -48,8 +53,14 @@ Card.propTypes = {
 
 Card.defaultProps = {
 	rt: 'none',
-	type: 'tarif'
+	type: 'tarif',
+  srecial: 'falce'    
 };
+
+Card.special = {
+  false: '',
+  true: 'card_special'    
+}
 
 Card.rt = {
 	none: '',

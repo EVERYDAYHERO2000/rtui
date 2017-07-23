@@ -1020,6 +1020,54 @@ template {
   text-align: right;
   margin: 20px 0 10px 0;
 }
+.card_tarif.card_special .optionicon {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+  box-shadow: inset 0px 0px 0px 2px #000;
+}
+.card_tarif.card_special .text {
+  color: #FFFFFF;
+}
+.card_tarif.card_special .price__prev {
+  color: #FFFFFF;
+}
+.card_tarif.card_special .price__new {
+  color: #FFFFFF;
+}
+.card_tarif.card_special .price__unit {
+  color: #FFFFFF;
+}
+.card_tarif.card_special .button {
+  background: #FFFFFF;
+}
+.card_tarif.card_internet.card_special {
+  background: #48BBAF;
+  color: #ffffff;
+}
+.card_tarif.card_internet.card_special .button {
+  color: #48BBAF;
+}
+.card_tarif.card_tv.card_special {
+  background: #F96753;
+  color: #ffffff;
+}
+.card_tarif.card_tv.card_special .button {
+  color: #F96753;
+}
+.card_tarif.card_phonet.card_special {
+  background: #F4864E;
+  color: #ffffff;
+}
+.card_tarif.card_phonet.card_special .button {
+  color: #F4864E;
+}
+.card_tarif.card_mobile.card_special {
+  background: #9478D1;
+  color: #ffffff;
+}
+.card_tarif.card_mobile.card_special .button {
+  color: #9478D1;
+}
 .card_tizer.card_internet {
   background: #48BBAF;
 }

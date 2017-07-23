@@ -61,24 +61,81 @@
 	}
 	//.card_tarif
 	&_tarif {}
+	//.card_tarif.card_special    
+	&_tarif&_special {
+		//.card_tarif.card_special .optionicon   
+		.optionicon {
+			.filter(invert(100%));
+			box-shadow: inset 0px 0px 0px 2px #000;
+		}
+		.text {
+			color: @color-white;
+		}
+		.price {
+			&__prev {
+				color: @color-white;
+			}
+			&__new {
+				color: @color-white;
+			}
+			&__unit {
+				color: @color-white;
+			}
+		}
+		.button {
+			background: @color-white;
+		}
+	}
+	//.card_tarif.card_internet.card_special    
+	&_tarif&_internet&_special {
+		background: @color-product-internet;
+		color: contrast(@color-product-internet);
+		.button {
+			color: @color-product-internet;
+		}
+	}
+	//.card_tarif.card_tv.card_special    
+	&_tarif&_tv&_special {
+		background: @color-product-tv;
+		color: contrast(@color-product-tv);
+		.button {
+			color: @color-product-tv;
+		}
+	}
+	//.card_tarif.card_phone.card_special    
+	&_tarif&_phonet&_special {
+		background: @color-product-phone;
+		color: contrast(@color-product-phone);
+		.button {
+			color: @color-product-phone;
+		}
+	}
+	//.card_tarif.card_mobile.card_special    
+	&_tarif&_mobile&_special {
+		background: @color-product-mobile;
+		color: contrast(@color-product-mobile);
+		.button {
+			color: @color-product-mobile;
+		}
+	}
 	//.card_tizer
 	&_tizer {}
-  //.card_tizer.card_internet
-  &_tizer&_internet {
-    background: @color-product-internet;
-  }
-  //.card_tizer.card_tv
-  &_tizer&_tv {
-    background: @color-product-tv;
-  }
-  //.card_tizer.card_phone
-  &_tizer&_phone {
-    background: @color-product-phone;
-  }
-  //.card_tizer.card_mobile
-  &_tizer&_mobile {
-    background: @color-product-mobile;
-  }
+	//.card_tizer.card_internet
+	&_tizer&_internet {
+		background: @color-product-internet;
+	}
+	//.card_tizer.card_tv
+	&_tizer&_tv {
+		background: @color-product-tv;
+	}
+	//.card_tizer.card_phone
+	&_tizer&_phone {
+		background: @color-product-phone;
+	}
+	//.card_tizer.card_mobile
+	&_tizer&_mobile {
+		background: @color-product-mobile;
+	}
 	//.card_3
 	&_3 {
 		.flex-basis(calc(~"(100%/4) * 3" - @modul-xl));
