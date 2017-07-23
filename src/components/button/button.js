@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-export default function Button({ text, theme, type, rt, icon, size, autosize, link }) {
+export default function Button({ id, text, theme, type, rt, icon, size, autosize, link }) {
 	const classList = [ 
 		'button', 
 		Button.size[size],  
@@ -15,6 +15,7 @@ export default function Button({ text, theme, type, rt, icon, size, autosize, li
 			
 	return (
 		<ButtonType 
+		  id={(id)? id : ''}
 			href={(type === 'a') ? link : ''} 
 			className={classList}>
 			{(icon) ? <i className={'fa ' + icon}></i> : ''}
@@ -51,7 +52,7 @@ Button.propTypes = {
 	/**
 	 * Тип элемента:
 	 */	
-	type: PropTypes.oneOf(['div','a', 'button']),
+	type: PropTypes.oneOf(['div','a', 'button', 'label']),
 	/**
 	 * Услуга (цвет):
 	 */	
@@ -94,5 +95,6 @@ Button.autosize = {
 Button.type = {
 	div: 'div',
 	a: 'a',
-	button: 'button'
+	button: 'button',
+	label: 'label'
 }

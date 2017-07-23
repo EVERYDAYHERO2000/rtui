@@ -7,22 +7,25 @@
 	.flex-wrap(nowrap);
 	.align-content(stretch);
 	.box-sizing(border-box);
-	//.buttongroup .button
-	.button {
-		border-radius: 0;
-		//.buttongroup .button:first-child
-		&:first-of-type {
+	//.buttongroup .buttongroup__item 
+	&__item {
+		//.buttongroup .buttongroup__item .button
+		.button {
+			border-radius: 0;
+		}
+		//.buttongroup .buttongroup__item:first-child .button
+		&:first-of-type .button {
 			border-radius: @radius-button 0 0 @radius-button;
 		}
-		//.buttongroup .button:last-child
-		&:last-of-type {
+		//.buttongroup .buttongroup__item:last-child .button
+		&:last-of-type .button {
 			border-radius: 0 @radius-button @radius-button 0;
 		}
-	}
-	//.buttongroup .button+.button, .buttongroup input+.button:not(:first-of-type)
-	.button+.button:not(:first-of-type),
-	input+.button:not(:first-of-type) {
-		margin: 0 0 0 -2px;
+		//.buttongroup .button+.button, .buttongroup input+.button:not(:first-of-type)
+		&+&:not(:first-of-type),
+		input+&:not(:first-of-type) {
+			margin: 0 0 0 -2px;
+		}
 	}
 	//.buttongroup input
 	input {
@@ -43,29 +46,49 @@
 			background-color: @color-second;
 			color: contrast(@color-second);
 		}
+		//.buttongroup input:checked+.button.button_internet
+		&:checked+.button.button_internet {
+			background-color: @color-product-internet;
+			color: contrast(@color-product-internet);
+		}
+		//.buttongroup input:checked+.button.button_phone
+		&:checked+.button.button_phone {
+			background-color: @color-product-phone;
+			color: contrast(@color-product-phone);
+		}
+		//.buttongroup input:checked+.button.button_tv
+		&:checked+.button.button_tv {
+			background-color: @color-product-tv;
+			color: contrast(@color-product-tv);
+		}
+		//.buttongroup input:checked+.button.button_mobile
+		&:checked+.button.button_mobile {
+			background-color: @color-product-mobile;
+			color: contrast(@color-product-mobile);
+		}		
 	}
 	.MEDIA_MOBILE( {
 		overflow: scroll;
-    width:100vw;
-    margin: 0 -@modul-m;
+		width: 100vw;
+		margin: 0 -@modul-m;
 		//.buttongroup:first-of-type::before
-    &:first-of-type::before {
-      content: '';
-      min-width: @modul-m;
-    }
+		&:first-of-type::before {
+			content: '';
+			min-width: @modul-m;
+		}
 		//.buttongroup:last-of-type::after
-    &:last-of-type::after {
-      content: '';
-      min-width: @modul-m;
-    }
+		&:last-of-type::after {
+			content: '';
+			min-width: @modul-m;
+		}
 		//.buttongroup::-webkit-scrollbar
-    &::-webkit-scrollbar { 
-      display: none; 
-    }
+		&::-webkit-scrollbar {
+			display: none;
+		}
 		//.buttongroup .button
 		.button {
 			overflow: visible;
-		}   
+		}
 	}
 	);
 }

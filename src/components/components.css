@@ -847,17 +847,17 @@ template {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.buttongroup .button {
+.buttongroup__item .button {
   border-radius: 0;
 }
-.buttongroup .button:first-of-type {
+.buttongroup__item:first-of-type .button {
   border-radius: 5px 0 0 5px;
 }
-.buttongroup .button:last-of-type {
+.buttongroup__item:last-of-type .button {
   border-radius: 0 5px 5px 0;
 }
-.buttongroup .button + .button:not(:first-of-type),
-.buttongroup input + .button:not(:first-of-type) {
+.buttongroup__item + .buttongroup__item:not(:first-of-type),
+input + .buttongroup__item:not(:first-of-type) {
   margin: 0 0 0 -2px;
 }
 .buttongroup input {
@@ -876,6 +876,22 @@ template {
 }
 .buttongroup input:checked + .button.button_main {
   background-color: #F4864E;
+  color: #ffffff;
+}
+.buttongroup input:checked + .button.button_internet {
+  background-color: #48BBAF;
+  color: #ffffff;
+}
+.buttongroup input:checked + .button.button_phone {
+  background-color: #F4864E;
+  color: #ffffff;
+}
+.buttongroup input:checked + .button.button_tv {
+  background-color: #F96753;
+  color: #ffffff;
+}
+.buttongroup input:checked + .button.button_mobile {
+  background-color: #9478D1;
   color: #ffffff;
 }
 @media only screen and (max-device-width: 480px) {
