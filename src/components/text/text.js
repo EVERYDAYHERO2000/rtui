@@ -2,12 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-export default function Text({ color, description, size, children }) {
+export default function Text({ theme, size, children }) {
 	const classList = [ 
 		'text', 
 		Text.size[size], 
-		Text.color[color], 
-		Text.description[description]
+		Text.theme[theme]
 	].join(' ').trim().replace(/\s+/g,' '); 
 	
 	return (
@@ -32,19 +31,14 @@ Text.propTypes = {
 	 */
 	size: PropTypes.oneOf(['xs', 's', 'm']),
 	/**
-	 * Цвет:
+	 * Тема:
 	 */
-	color: PropTypes.oneOf(['none', 'white']),
-	/**
-	 * Полупрозрачный:
-	 */	
-	description: PropTypes.oneOf(['off','on'])
+	theme: PropTypes.oneOf(['normal', 'description'])
 };
 
 Text.defaultProps = {
 	size: 'm',
-	color: 'none',
-	description: 'off'
+	theme: 'normal'
 };
 
 Text.size = {
@@ -53,13 +47,8 @@ Text.size = {
 	m: 'text_m'
 };
 
-Text.color = {
-	none: '',
-	white: 'text_white'
-};
-
-Text.description = {
-	off: '',
-	on: 'text_description'
+Text.theme = {
+	normal: '',
+	description: 'text_description'
 };
 

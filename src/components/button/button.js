@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-export default function Button({ text, theme, type, rt, icon, size, autosize, href }) {
+export default function Button({ text, theme, type, rt, icon, size, autosize, link }) {
 	const classList = [ 
 		'button', 
 		Button.size[size],  
@@ -15,7 +15,7 @@ export default function Button({ text, theme, type, rt, icon, size, autosize, hr
 			
 	return (
 		<ButtonType 
-			href={(type === 'a') ? '' : href} 
+			href={(type === 'a') ? link : ''} 
 			className={classList}>
 			{(icon) ? <i className={'fa ' + icon}></i> : ''}
 			{text}
@@ -31,7 +31,7 @@ Button.propTypes = {
 	/**
 	 * Ссылка:
 	 */
-	href: PropTypes.string,
+	link: PropTypes.string,
 	/**
 	 * Размер:
 	 */

@@ -1,6 +1,6 @@
 Кнопка:
 
-    <Button href="#" text="Подключить" />
+    <Button link="#" text="Подключить" />
 		
 Кнопка обводкой: 
 
@@ -24,12 +24,12 @@
 			
 Кнопка c иконкой:
 
-    <Button icon="fa-plus" autosize="true" href="#" text="Подключить" />	
+    <Button icon="fa-plus" autosize="true" link="#" text="Подключить" />	
 		
 Контурная кнопка c иконкой:
 
-    <Button icon="fa-plus" autosize="true" href="#" rt="tv" theme="line"  text="Подключить" />		
+    <Button icon="fa-plus" autosize="true" link="#" rt="tv" theme="line"  text="Подключить" />		
 		
 Мелкая кнопка c иконкой:
 
-    <Button icon="fa-plus" autosize="true" href="#" rt="tv" theme="line" size="s" text="Подключить" />					
+    <Button icon="fa-plus" autosize="true" link="#" rt="tv" theme="line" size="s" text="Подключить" />					

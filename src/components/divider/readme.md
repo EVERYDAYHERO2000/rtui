@@ -4,7 +4,7 @@
 		
 Разделитель для формы с заголовком:
 
-    <Divider><Header size="xs">Контактная информация</Header></Divider>	
+    <Divider><Header type="h4" text="Контактная информация" /></Divider>	
 		
 Разделитель для формы с текстом:
 

@@ -1,30 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Card({ color, size, border }) {
+export default function Card({ rt, type, data }) {
 	const classList = [ 
 		'card', 
-		Card.color[color],
-		Card.size[size],
-		Card.border[border]
+		Card.type[type],
+		Card.rt[rt]
 	].join(' ').trim().replace(/\s+/g,' '); 
 	
-	
+	const icons = data.options.map(function(e,i){
+    return (
+       <OptionIcon key={i} icon={e.icon} /> 
+    );
+  });
 	
 	return (
-		<div className="card card_tarif">
+		<div className={classList}>
 					<div className="card__head">
-						<OptionIcon icon="optionicon_1" />
-						<OptionIcon icon="optionicon_3" />
-						<OptionIcon icon="optionicon_4" />
+						{icons}
 					</div>
 					<div className="card__description">
-						<Header size="s">Максимум</Header>
-						<Text size="s">Включает СТАРТОВЫЙ + спортивные, детские и музыкальные телеканалы + познавательные телеканалы + дополнительный пакет ТВОЁ КИНО</Text>
+						<Header text={data.title} />
+						<Text size="s">{data.description}</Text>
 					</div>
 					<div className="card__footer">
-						<Price prewprice="850" newprice="600" period="m" />
-						<Button href="#" text="Подключить" />
+				    <Price rt={ (rt) ? rt : '' } data={data.price} />
+						<Button rt={ (rt) ? rt : '' } link={data.link} text="Подключить" />
 					</div>
 		</div>
 	);
@@ -32,38 +33,35 @@ export default function Card({ color, size, border }) {
 
 Card.propTypes = {
 	/**
-	 * Размер:
+	 * Данные:
 	 */
-	size: PropTypes.oneOf(['none', 's', 'm']),
+	data: PropTypes.object,
 	/**
-	 * Цает кнопки:
-	 */
-	color: PropTypes.oneOf(['none','white']),
+	 * Услуга (цвет):
+	 */	
+	rt: PropTypes.oneOf(['none', 'main', 'internet','tv', 'phone', 'mobile']), 
 		/**
 	 * Рамка:
 	 */
-	border: PropTypes.oneOf(['off','on'])
+	type: PropTypes.oneOf(['none','tarif'])
 };
 
 Card.defaultProps = {
-	size: 'none',
-	color: 'none',
-	border: 'on'
+	rt: 'none',
+	type: 'tarif'
 };
 
-Card.size = {
-	none : '',
-	s: '',
-	m: 'optionicon_m'
-};
-
-Card.color = {
+Card.rt = {
 	none: '',
-	white: 'optionicon_white'
+	main: 'card_main',
+  internet: 'card_internet',
+  tv: 'card_tv',
+  phone: 'card_phone',
+  mobile: 'card_mobile'    
 };
 
-Card.border = {
-	on: '',
-	off: 'optionicon_clear'
+Card.type = {
+	none: '',
+	tarif: 'card_tarif'
 };
 

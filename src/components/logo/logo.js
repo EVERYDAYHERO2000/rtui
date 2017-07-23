@@ -2,18 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-export default function Logo({ theme, mode, text, link }) {
+export default function Logo({ type, text, link }) {
 	const classList = [ 
 		'logo', 
-		Logo.theme[theme], 
-		Logo.mode[mode]
+		Logo.type[type]
 	].join(' ').trim().replace(/\s+/g,' '); 
 	
     const LogoType = `${(link)? 'a' : 'div'}`;  
     
 	return (
-		<LogoType href={(link)? link : ''} className={classList}>
-			{(mode === 'icon')? text : ''}
+		<LogoType 
+      href={(link)? link : ''} 
+      className={classList}>
+			{(type === 'icon')? text : ''}
 		</LogoType>
 	);
 }
@@ -24,27 +25,20 @@ Logo.propTypes = {
 	 */
 	text: PropTypes.string,
 	/**
-	 * Тема:
+	 * Тип:
 	 */
-	theme: PropTypes.oneOf(['b2c','b2b', 'white']),
+	type: PropTypes.oneOf(['logo', 'icon']),
 	/**
-	 * Режим:
+	 * Ссылка:
 	 */
-	mode: PropTypes.oneOf(['logo', 'icon'])
+	link: PropTypes.string   
 };
 
 Logo.defaultProps = {
-	theme: 'b2c',
-	mode: 'logo'
+	type: 'logo'
 };
 
-Logo.theme = {
-	b2b: '',
-	b2c: '',
-	white: ''
-};
-
-Logo.mode = {
+Logo.type = {
 	logo: '',
 	icon: 'logo_icon'
 };

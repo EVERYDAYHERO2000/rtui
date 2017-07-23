@@ -445,13 +445,13 @@ template {
   padding: 0;
   hyphens: auto;
 }
-.header_promo {
+.header_l {
   font-size: 56px;
   line-height: 1.1;
   font-weight: bold;
 }
 @media only screen and (max-device-width: 480px) {
-  .header_promo {
+  .header_l {
     font-size: 48px;
   }
 }
@@ -477,6 +477,10 @@ template {
   padding: 20px;
   display: inline-block;
   background-color: #F4864E;
+  color: #ffffff;
+}
+.header_form.header_main {
+  background-color: #019fe8;
   color: #ffffff;
 }
 .header_form.header_internet {
@@ -2279,6 +2283,18 @@ template {
   font-size: 64px;
   display: inline-block;
   line-height: 40px;
+}
+.price_internet .price__new {
+  color: #48BBAF;
+}
+.price_tv .price__new {
+  color: #F96753;
+}
+.price_phone .price__new {
+  color: #F4864E;
+}
+.price_mobile .price__new {
+  color: #9478D1;
 }
 .price__unit {
   font-family: Helvetica, Arial, sans-serif;

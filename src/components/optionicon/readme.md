@@ -8,5 +8,5 @@
 		
 Крупная иконка опции без рамки:
 
-    <OptionIcon size="m" border="off" icon="optionicon_1" />			
+    <OptionIcon size="m" theme="normal" icon="optionicon_1" />			
 		

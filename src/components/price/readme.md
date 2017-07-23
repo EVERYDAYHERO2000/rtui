@@ -1,11 +1,15 @@
-Ценник:
+Абонентская плата в месяц:
 
-    <Price prewprice="200" newprice="120" />
+    <Price data={{prewprice:"200", newprice:'120', unit:'руб.', period:'мес.'}} />
 		
-Ценник:
+Цена:
 
-    <Price prewprice="850" newprice="600" period="y" />	
+    <Price data={{prewprice:820, newprice:530, unit:'руб.', period:''}} />	
 		
-Ценник:
+Cтоимость в год за интернет:
 
-    <Price newprice="300" period="none" />			
+    <Price rt="internet" data={{newprice:120, period:'none', unit:'руб.', period:'год'}} />	
+    
+Фиксированная стоимость за мобильную связь:
+
+    <Price rt="mobile" data={{newprice:120, period:'none', unit:'руб.', period:'год'}} />	    

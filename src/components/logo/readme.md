@@ -4,8 +4,8 @@
     
 Иконка:
     
-    <Logo link="#" mode="icon" />  
+    <Logo link="#" type="icon" />  
     
 Иконка с подписью:
     
-    <Logo mode="icon" text="Ростелеком" />      
+    <Logo type="icon" text="Ростелеком" />      

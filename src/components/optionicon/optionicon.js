@@ -1,16 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function OptionIcon({ color, size, icon, border }) {
+export default function OptionIcon({ size, icon, theme }) {
 	const classList = [ 
 		'optionicon', 
 		icon, 
-		OptionIcon.color[color],
 		OptionIcon.size[size],
-		OptionIcon.border[border]
+		OptionIcon.theme[theme]
 	].join(' ').trim().replace(/\s+/g,' '); 
-	
-	
 	
 	return (
 		<div className={classList}>
@@ -26,36 +23,25 @@ OptionIcon.propTypes = {
 	/**
 	 * Размер:
 	 */
-	size: PropTypes.oneOf(['none', 's', 'm']),
+	size: PropTypes.oneOf(['s', 'm']),
 	/**
-	 * Цает кнопки:
+	 * Тема:
 	 */
-	color: PropTypes.oneOf(['none','white']),
-		/**
-	 * Рамка:
-	 */
-	border: PropTypes.oneOf(['off','on'])
+	theme: PropTypes.oneOf(['normal','border'])
 };
 
 OptionIcon.defaultProps = {
-	size: 'none',
-	color: 'none',
-	border: 'on'
+	size: 's',
+	theme: 'border'
 };
 
 OptionIcon.size = {
-	none : '',
 	s: '',
 	m: 'optionicon_m'
 };
 
-OptionIcon.color = {
-	none: '',
-	white: 'optionicon_white'
-};
-
-OptionIcon.border = {
-	on: '',
-	off: 'optionicon_clear'
+OptionIcon.theme = {
+	border: '',
+	normal: 'optionicon_clear'
 };
 
